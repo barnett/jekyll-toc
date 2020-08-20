@@ -14,7 +14,8 @@ module Jekyll
         'list_class' => 'section-nav',
         'sublist_class' => '',
         'item_class' => 'toc-entry',
-        'item_prefix' => 'toc-'
+        'item_prefix' => 'toc-',
+        'min_items'   => 2
       }.freeze
 
       def initialize(options)
@@ -27,6 +28,7 @@ module Jekyll
         @sublist_class = options['sublist_class']
         @item_class = options['item_class']
         @item_prefix = options['item_prefix']
+        @min_items = options['min_items']
       end
 
       private
